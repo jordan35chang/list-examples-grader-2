@@ -26,7 +26,7 @@ java -cp $CPATH org.junit.runner.JUnitCore TestListExamples > junit-output.txt
 
 # We check for "FAILURES!!!" and then do a bit of parsing of the last line to
 # get the count
-FAILURES=`grep -c FAILURES!!! junit-output.txt`
+FAILURES=`grep -f FAILURES!!! junit-output.txt`
 
 if [[ $FAILURES -eq 0 ]]
 then
